@@ -1,5 +1,5 @@
 import {unlink} from 'fs'
-import {getDirname} from "../utils/getDirname.js";
+import {getDirname} from "./utils/getDirname.js";
 import ApiError from "./apiError/apiError.js";
 
 export const remove = async () => {
