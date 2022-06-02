@@ -1,3 +1,20 @@
+import {cp} from "fs";
+import {getDirname} from "../utils/getDirname.js";
+import ApiError from "./apiError/apiError.js";
+
 export const copy = async () => {
-    // Write your code here 
+
+    await cp(`${getDirname(import.meta.url)}/files`,
+        `${getDirname(import.meta.url)}/files_copy`,
+        {
+            recursive: true,
+            errorOnExist: true,
+            force: false
+        },
+        (err) => {
+            if (err) throw ApiError.BadRequest()
+            console.log('copied');
+        })
 };
+
+copy()
