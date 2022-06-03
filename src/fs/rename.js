@@ -1,6 +1,6 @@
 import {access, rename as renameFile} from 'fs'
-import {getDirname} from "./utils/getDirname.js";
-import ApiError from "./apiError/apiError.js";
+import {getDirname} from "../utils/getDirname.js";
+import ApiError from "../utils/apiError.js";
 
 export const rename = async () => {
     const filePath = `${getDirname(import.meta.url)}/files/`

@@ -1,6 +1,6 @@
 import {unlink} from 'fs'
-import {getDirname} from "./utils/getDirname.js";
-import ApiError from "./apiError/apiError.js";
+import {getDirname} from "../utils/getDirname.js";
+import ApiError from "../utils/apiError.js";
 
 export const remove = async () => {
     await unlink(`${getDirname(import.meta.url)}/files/fileToRemove.txt`,

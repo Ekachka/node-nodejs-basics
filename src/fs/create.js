@@ -1,6 +1,6 @@
 import {writeFile} from 'fs';
-import {getDirname} from "./utils/getDirname.js";
-import ApiError from "./apiError/apiError.js";
+import {getDirname} from "../utils/getDirname.js";
+import ApiError from "../utils/apiError.js";
 
 export const create = async () => {
     const text = 'I am fresh and young'
