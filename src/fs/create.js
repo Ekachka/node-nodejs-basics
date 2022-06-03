@@ -6,10 +6,11 @@ export const create = async () => {
     const text = 'I am fresh and young'
     const file = `${getDirname(import.meta.url)}/files/fresh.txt`
 
-    writeFile(file, text, {flag: 'wx+'}, (err) => {
+    await writeFile(file, text, {flag: 'wx+'}, (err) => {
         if (err) throw ApiError.BadRequest()
         console.log('created');
     })
 };
 
 create()
+    .catch((err)=> console.log(err))

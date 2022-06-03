@@ -23,3 +23,4 @@ export const calculateHash = async () => {
 };
 
 calculateHash()
+    .catch((err)=> console.log(err))

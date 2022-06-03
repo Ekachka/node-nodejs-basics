@@ -11,3 +11,4 @@ export const list = async () => {
 };
 
 list()
+    .catch((err)=> console.log(err))

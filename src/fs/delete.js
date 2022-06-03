@@ -11,4 +11,5 @@ export const remove = async () => {
 };
 
 remove()
+    .catch((err)=> console.log(err))
 

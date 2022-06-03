@@ -18,3 +18,4 @@ export const rename = async () => {
 };
 
 rename()
+    .catch((err)=> console.log(err))

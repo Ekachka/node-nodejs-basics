@@ -10,7 +10,7 @@ export const transform = async () => {
         },
     });
 
-    pipeline(
+   await pipeline(
         stdin,
         reverseString,
         stdout,
@@ -21,3 +21,4 @@ export const transform = async () => {
 };
 
 transform()
+    .catch((err)=> console.log(err))

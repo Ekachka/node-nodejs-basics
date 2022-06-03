@@ -11,3 +11,4 @@ export const read = async () => {
 };
 
 read()
+    .catch((err)=> console.log(err))

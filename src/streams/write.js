@@ -4,8 +4,7 @@ import {getDirname} from "../utils/getDirname.js";
 const {stdin, stdout} = process;
 
 export const write = async () => {
-    const path = getDirname(import.meta.url)
-    const writable = createWriteStream(`${path}/files/fileToWrite.txt`)
+    const writable = await createWriteStream(`${getDirname(import.meta.url)}/files/fileToWrite.txt`)
 
     stdout.write('Enter the text: ');
     stdin.on('data', data => {
@@ -15,3 +14,4 @@ export const write = async () => {
 };
 
 write()
+    .catch((err)=> console.log(err))

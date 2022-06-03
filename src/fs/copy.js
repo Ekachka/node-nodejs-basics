@@ -18,3 +18,4 @@ export const copy = async () => {
 };
 
 copy()
+    .catch((err)=> console.log(err))
