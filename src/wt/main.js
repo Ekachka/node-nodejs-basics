@@ -18,9 +18,9 @@ const runWorker = (workerData) => {
 
 const transformStatus = (statuses) => statuses.map(status => {
     if (status.status === 'fulfilled') {
-        return {...status, status: 'resolved'}
+        return { status: 'resolved', data: status.value}
     }
-    return {...status, status: 'error'}
+    return { status: 'error', data: null}
 })
 
 
